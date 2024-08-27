@@ -1,0 +1,67 @@
+{
+  "name": "anthropic-vertex-ai",
+  "version": "0.0.1",
+  "license": "Apache-2.0",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "clean": "rm -rf dist",
+    "dev": "tsup --watch",
+    "lint": "eslint \"./**/*.ts*\"",
+    "type-check": "tsc --noEmit",
+    "prettier-check": "prettier --check \"./**/*.ts*\"",
+    "test": "pnpm test:node && pnpm test:edge",
+    "test:edge": "vitest --config vitest.edge.config.js --run",
+    "test:node": "vitest --config vitest.node.config.js --run"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "dependencies": {
+    "@ai-sdk/provider": "0.0.22",
+    "@ai-sdk/provider-utils": "1.0.17",
+    "google-auth-library": "^9.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "tsup": "^8",
+    "typescript": "5.5.4",
+    "zod": "3.23.8",
+    "turbo": "^1.10.13",
+    "vitest": "1.6.0"
+  },
+  "peerDependencies": {
+    "zod": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://sdk.vercel.ai/providers/community-providers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vercel/ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vercel/ai/issues"
+  },
+  "keywords": [
+    "ai",
+    "vertexai",
+    "anthropic",
+    "claude"
+  ]
+}
