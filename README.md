@@ -94,10 +94,10 @@ AnthropicVertex language models can also be used in the `streamText`, `generateO
 
 | Model                        | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
 | ---------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| `claude-3-5-sonnet@20240620` | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
-| `claude-3-opus@20240229`     | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
-| `claude-3-sonnet@20240229`   | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
-| `claude-3-haiku@20240307`    | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> | <Check size={18} /> |
+| `claude-3-5-sonnet@20240620` | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-opus@20240229`     | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-sonnet@20240229`   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-haiku@20240307`    | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
 
 ## Environment Variables
 
