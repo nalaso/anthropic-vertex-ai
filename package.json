@@ -1,6 +1,6 @@
 {
   "name": "anthropic-vertex-ai",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "./dist/index.js",
@@ -54,10 +54,10 @@
   "homepage": "https://sdk.vercel.ai/providers/community-providers",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vercel/ai.git"
+    "url": "git+https://github.com/nalaso/anthropic-vertex-ai.git"
   },
   "bugs": {
-    "url": "https://github.com/vercel/ai/issues"
+    "url": "https://github.com/nalaso/anthropic-vertex-ai/issues"
   },
   "keywords": [
     "ai",
