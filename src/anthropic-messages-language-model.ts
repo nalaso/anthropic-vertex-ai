@@ -239,6 +239,7 @@ export class AnthropicMessagesLanguageModel implements LanguageModelV1 {
       headers: combineHeaders(this.config.headers(), options.headers),
       body: {
         ...args,
+        stream: true,
       },
       failedResponseHandler: anthropicFailedResponseHandler,
       successfulResponseHandler: createEventSourceResponseHandler(
