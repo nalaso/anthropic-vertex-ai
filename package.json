@@ -1,6 +1,6 @@
 {
   "name": "anthropic-vertex-ai",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "license": "Apache-2.0",
   "sideEffects": false,
   "main": "./dist/index.js",

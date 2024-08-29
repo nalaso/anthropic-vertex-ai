@@ -84,46 +84,53 @@ export function createAnthropicVertex(
   options: AnthropicVertexProviderSettings = {},
 ): AnthropicVertexProvider {
 
-  const config = {
-    projectId: loadSetting({
-      settingValue: options.projectId,
-      settingName: 'projectId',
-      environmentVariableName: 'GOOGLE_VERTEX_PROJECT_ID',
-      description: 'Google Vertex project id',
-    }),
-    region: loadSetting({
-      settingValue: options.region,
-      settingName: 'region',
-      environmentVariableName: 'GOOGLE_VERTEX_REGION',
-      description: 'Google Vertex region',
-    }),
-    googleAuth: options.googleAuth,
-  };
+  const getConfig = () => {
+    const config = {
+      projectId: loadSetting({
+        settingValue: options.projectId,
+        settingName: 'projectId',
+        environmentVariableName: 'GOOGLE_VERTEX_PROJECT_ID',
+        description: 'Google Vertex project id',
+      }),
+      region: loadSetting({
+        settingValue: options.region,
+        settingName: 'region',
+        environmentVariableName: 'GOOGLE_VERTEX_REGION',
+        description: 'Google Vertex region',
+      }),
+      googleAuth: options.googleAuth,
+    };
 
-  if (!config.region) {
-    throw new Error(
-      'No region was given. The client should be instantiated with the `region` option or the `GOOGLE_VERTEX_REGION` environment variable should be set.',
-    );
+    if (!config.region) {
+      throw new Error(
+        'No region was given. The client should be instantiated with the `region` option or the `GOOGLE_VERTEX_REGION` environment variable should be set.',
+      );
+    }
+
+    if (!config.projectId) {
+      throw new Error(
+        'No project was given. The client should be instantiated with the `projectID` option or the `GOOGLE_VERTEX_PROJECT_ID` environment variable should be set.',
+      );
+    }
+
+    return config;
   }
-  
-  if(!config.projectId) {
-    throw new Error(
-      'No project was given. The client should be instantiated with the `projectID` option or the `GOOGLE_VERTEX_PROJECT_ID` environment variable should be set.',
-    );
-  }
-
-  const baseURL =
-    withoutTrailingSlash(options.baseURL) ??
-    `https://${config.region}-aiplatform.googleapis.com/v1`;
-
-  const auth =
-    options.googleAuth ?? new GoogleAuth({ scopes: 'https://www.googleapis.com/auth/cloud-platform' });
 
   const createChatModel = (
     modelId: AnthropicMessagesModelId,
     settings: AnthropicMessagesSettings = {},
-  ) =>
-    new AnthropicMessagesLanguageModel(modelId, settings, {
+  ) => {
+    
+    const config = getConfig();
+
+    const baseURL =
+      withoutTrailingSlash(options.baseURL) ??
+      `https://${config.region}-aiplatform.googleapis.com/v1`;
+
+    const auth =
+      options.googleAuth ?? new GoogleAuth({ scopes: 'https://www.googleapis.com/auth/cloud-platform' });
+
+    return new AnthropicMessagesLanguageModel(modelId, settings, {
       provider: 'anthropic.messages',
       baseURL,
       headers: () => ({
@@ -134,6 +141,7 @@ export function createAnthropicVertex(
       region: config.region,
       googleAuth: auth
     });
+  }
 
   const provider = function (
     modelId: AnthropicMessagesModelId,
