@@ -40,7 +40,7 @@
     "typescript": "5.5.4",
     "zod": "3.23.8",
     "turbo": "^1.10.13",
-    "vitest": "1.6.0"
+    "vitest": "2.1.1"
   },
   "peerDependencies": {
     "zod": "^3.0.0"
