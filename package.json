@@ -35,7 +35,7 @@
     "google-auth-library": "^9.12.0"
   },
   "devDependencies": {
-    "@types/node": "^18",
+    "@types/node": "^22",
     "tsup": "^8",
     "typescript": "5.5.4",
     "zod": "3.23.8",
