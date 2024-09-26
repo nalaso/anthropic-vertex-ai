@@ -32,7 +32,7 @@
   "dependencies": {
     "@ai-sdk/provider": "0.0.22",
     "@ai-sdk/provider-utils": "1.0.17",
-    "google-auth-library": "^9.12.0"
+    "google-auth-library": "^9.14.1"
   },
   "devDependencies": {
     "@types/node": "^22",
