@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "@ai-sdk/provider": "0.0.23",
-    "@ai-sdk/provider-utils": "1.0.17",
+    "@ai-sdk/provider-utils": "1.0.20",
     "google-auth-library": "^9.14.1"
   },
   "devDependencies": {
