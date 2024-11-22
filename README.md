@@ -4,7 +4,7 @@
 
 Docs - [anthropic-vertex-ai Documentation](https://sdk.vercel.ai/providers/community-providers/anthropic-vertex-ai)
 
-![NPM Downloads](https://img.shields.io/npm/dw/anthropic-vertex-ai?style=for-the-badge&label=anthropic-vertex-ai&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fanthropic-vertex-ai)
+[![NPM Downloads](https://img.shields.io/npm/dw/anthropic-vertex-ai?style=for-the-badge&label=anthropic-vertex-ai)](https://www.npmjs.com/package/anthropic-vertex-ai)
 
 ## Setup
 
@@ -96,12 +96,14 @@ AnthropicVertex language models can also be used in the `streamText`, `generateO
 
 ### Model Capabilities
 
-| Model                        | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
-| ---------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
-| `claude-3-5-sonnet@20240620` | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
-| `claude-3-opus@20240229`     | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
-| `claude-3-sonnet@20240229`   | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
-| `claude-3-haiku@20240307`    | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| Model                           | Image Input         | Object Generation   | Tool Usage          | Tool Streaming      |
+| ------------------------------- | ------------------- | ------------------- | ------------------- | ------------------- |
+| `claude-3-5-sonnet-v2@20241022` | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-5-haiku@20241022`     | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-5-sonnet@20240620`    | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-opus@20240229`        | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-sonnet@20240229`      | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
+| `claude-3-haiku@20240307`       | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  | :heavy_check_mark:  |
 
 ## Environment Variables
 
