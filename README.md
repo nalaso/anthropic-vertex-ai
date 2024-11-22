@@ -5,6 +5,7 @@
 Docs - [anthropic-vertex-ai Documentation](https://sdk.vercel.ai/providers/community-providers/anthropic-vertex-ai)
 
 ![NPM Downloads](https://img.shields.io/npm/dw/anthropic-vertex-ai?style=for-the-badge&label=anthropic-vertex-ai&link=https%3A%2F%2Fwww.npmjs.com%2Fpackage%2Fanthropic-vertex-ai)
+[![NPM Downloads](https://img.shields.io/npm/dw/anthropic-vertex-ai?style=for-the-badge&label=anthropic-vertex-ai)](https://www.npmjs.com/package/anthropic-vertex-ai)
 
 ## Setup
 
